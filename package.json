@@ -1,0 +1,44 @@
+{
+    "name": "google-calendar-bookmarklets",
+    "description": "add selected date to google calendar.",
+    "version": "0.0.1",
+    "homepage": "https://github.com/azu/google-calendar-bookmarklets/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/azu/google-calendar-bookmarklets.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "dist": "browserify index.js | bookmarkletter > google-calendar-jser.js && cp google-calendar-jser.js google-calendar.js",
+        "clip": "browserify index.js | pbcopy",
+        "test": "mocha test/*.js"
+    },
+    "directories": {
+        "test": "test/"
+    },
+    "author": "azu",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/azu/google-calendar-bookmarklets/issues"
+    },
+    "devDependencies": {
+        "bookmarkletter": "^0.1.0",
+        "browserify": "^5.11.2",
+        "browserify-shim": "^3.7.0",
+        "watchify": "^1.0.2"
+    },
+    "dependencies": {
+        "chrono-node": "^0.1.10"
+    },
+    "browser": {
+        "chrono": "./node_modules/chrono-node/chrono.min.js"
+    },
+    "browserify-shim": {
+        "chrono": "chrono"
+    },
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    }
+}
