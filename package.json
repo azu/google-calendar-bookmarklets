@@ -9,7 +9,7 @@
     },
     "main": "index.js",
     "scripts": {
-        "dist": "browserify index.js | bookmarkletter > google-calendar-jser.js && cp google-calendar-jser.js google-calendar.js",
+        "dist": "browserify index.js | bookmarkletter > google-calendar.js && cat google-calendar.js | sed -e 's/\\/b\\/0\\//\\/b\\/1\\//' > google-calendar-jser.js",
         "clip": "browserify index.js | pbcopy",
         "test": "mocha test/*.js"
     },
