@@ -56,7 +56,7 @@ var mockWindow = window.open('', '_blank');
         }
     };
     load(scripts.shift());
-})(["https://cdn.rawgit.com/berryboy/chrono/master/chrono.min.js"], function () {
+})(["//cdn.rawgit.com/berryboy/chrono/master/chrono.min.js"], function () {
     var formatDates = require("./lib/formatDates");
     var calendarURL = require("./lib/calendarURL");
     (function __main() {
